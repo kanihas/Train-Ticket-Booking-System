@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Train Ticket Booking Dashboard</title>
+ <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+ <header>
+ <h1>Welcome to Your Train Journey!</h1>
+ <div id="greeting"></div>
+ <button id="theme-toggle">Switch Theme</button>
+ <nav>
+ <ul>
+ <li><a href="#home" class="nav-link active">Home</a></li>
+ <li><a href="#book" class="nav-link">Reserve Your Seat</a></li>
+ <li><a href="#view" class="nav-link">My Bookings</a></li>
+ </ul>
+ </nav>
+ </header>
+ 
+ <main>
+ <!-- Home Page -->
+ <section id="home" class="page-section active">
+ <div style="text-align:center;">
+ <img src="https://images.unsplash.com/photo-1506744038136-
+46273834b3fb?auto=format&fit=crop&w=800&q=80" 
+ alt="Train Journey" 
+ style="width:100%;max-width:700px;border-radius:16px;box-shadow:0 4px 16px 
+14
+rgba(0,0,0,0.15);margin-bottom:2rem;">
+ <h2>
+ <img src="https://img.icons8.com/ios-filled/24/000000/train.png" alt="Home" 
+style="vertical-align:middle;margin-right:8px;">
+ All Aboard!
+ </h2>
+ <p style="font-size:1.2rem;">
+ Welcome to your one-stop platform for booking train tickets with ease.<br>
+ Reserve your seat, manage your bookings, and enjoy a smooth travel experience!
+ </p>
+ </section>
+ <!-- Book Ticket Page -->
+ <section id="book" class="page-section">
+ <h2>
+ <img src="https://img.icons8.com/ios-filled/24/000000/ticket.png" alt="Book" 
+style="vertical-align:middle;margin-right:8px;">
+ Reserve Your Seat
+ </h2>
+ <form id="booking-form">
+ <label for="from">Departure Station:</label>
+ <input type="text" id="from" name="from" required placeholder="Enter departure 
+station">
+ 
+ <label for="to">Arrival Station:</label>
+ <input type="text" id="to" name="to" required placeholder="Enter arrival station">
+ 
+ <label for="date">Travel Date:</label>
+ <input type="date" id="date" name="date" required>
+ 
+ <label for="seat">Choose Your Seat:</label>
+15
+ <select id="seat" name="seat" required>
+ <option value="">Select Seat</option>
+ <option value="A1">A1</option>
+ <option value="A2">A2</option>
+ <option value="A3">A3</option>
+ <option value="B1">B1</option>
+ <option value="B2">B2</option>
+ <option value="B3">B3</option>
+ <option value="C1">C1</option>
+ <option value="C2">C2</option>
+ <option value="C3">C3</option>
+ </select>
+ 
+ <button type="submit">Find Trains</button>
+ </form>
+ <div id="search-results"></div>
+ </section>
+ 
+ <!-- View Tickets Page -->
+ <section id="view" class="page-section">
+ <h2>
+ <img src="https://img.icons8.com/ios-filled/24/000000/ticket-confirmed.png" 
+alt="View" style="vertical-align:middle;margin-right:8px;">
+ My Bookings
+ </h2>
+ <div id="ticket-list">
+ <!-- Ticket information will be displayed here -->
+ </div>
+ </section>
+ </main>
+ 
+ <div id="ticket-modal" class="modal" style="display:none;">
+16
+ <div class="modal-content">
+ <span class="close" id="close-modal">&times;</span>
+ <div id="modal-details"></div>
+ </div>
+ </div>
+ <div id="toast"></div>
+ <footer>
+ <p>&copy; 2025 Train Ticket Booking System. All rights reserved.</p>
+ </footer>
+ 
+ <script src="scripts/main.js"></script>
+</body>
+</html>
